@@ -21,7 +21,7 @@
   "contributors": [
     "Mikael Brevik <mikaelbre@gmail.com>",
     "@torgeir"
-  ]
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/omniscientjs/omniscient-mixins/issues"
