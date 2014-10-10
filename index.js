@@ -1,4 +1,4 @@
 module.exports = {
-  setProps: require('./mixins/swapProps'),
+  swapProps: require('./mixins/swapProps'),
   focusingInput: require('./mixins/focusingInput')
 };
