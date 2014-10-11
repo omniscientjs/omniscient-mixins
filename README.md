@@ -18,7 +18,7 @@ var otherMixins = {
   }
 };
 
-var Component = component([otherMixins, swapProps], function (cursor, static) {
+var Component = component([otherMixins, swapProps], function () {
   return React.DOM.h1({}, 'Hello World!');
 });
 ```
