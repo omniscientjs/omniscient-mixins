@@ -1,8 +1,12 @@
 Collection of Omniscient and Immstruct mixins
 ======================
 
+### focusingInput
 
-## swapProps
+A `componentDidMount` hook that selects the text contained in an input.
+
+
+### swapProps
 
 A short-cut for deep merging on the current cursor for Omniscient.
 
