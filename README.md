@@ -19,6 +19,7 @@ var otherMixins = {
 };
 
 var Component = component([otherMixins, swapProps], function () {
-  return React.DOM.h1({}, 'Hello World!');
+  return React.DOM.form({ onSubmit: this.handleSubmit }, 
+                        React.DOM.input({}, 'Hello World!'));
 });
 ```
