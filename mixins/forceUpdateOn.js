@@ -1,8 +1,8 @@
-module.exports = function forceUpdateOn (referenceCursor) {
+module.exports = function forceUpdateOn (reference) {
   var cancel;
   return {
     componentDidMount: function () {
-      cancel = referenceCursor.onChange(this.forceUpdate.bind(this));
+      cancel = reference.observe(this.forceUpdate.bind(this));
     },
     componentWillUnmount: function () {
       cancel();
