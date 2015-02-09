@@ -2,7 +2,10 @@ module.exports = function forceUpdateOn (reference) {
   var cancel;
   return {
     componentDidMount: function () {
-      cancel = reference.observe(this.forceUpdate.bind(this));
+      var self = this;
+      cancel = reference.observe(function () {
+        self.forceUpdate();
+      });
     },
     componentWillUnmount: function () {
       cancel();
