@@ -27,3 +27,21 @@ var Component = component([otherMixins, swapProps], function () {
                         React.DOM.input({}, 'Hello World!'));
 });
 ```
+
+### forceUpdateOn
+
+A short-cut for forcing a component to re-render when a reference cursor has changed.
+See https://github.com/omniscientjs/immstruct#references for more information on Immstruct's reference cursors.
+
+```js
+var forceUpdateOn = require('omniscient-mixins/mixins/forceUpdateOn');
+// ...
+// Assume there's an Immstruct object called 'foo', looking like {bar: 'baz'} defined somewhere in here.
+// ...
+var barRef = foo.reference('bar');
+var refreshOnBarMixin = forceUpdateOn(barRef);
+
+var Component = component([otherMixins, refreshOnBarMixin], function () {
+  return <h1>I'll re-render when barRef gets updated!</h1>
+});
+```
